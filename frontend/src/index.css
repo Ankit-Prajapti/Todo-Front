@@ -1,0 +1,46 @@
+
+
+body {
+  background-color: #1e1e1e;
+  
+}
+
+.main-container {
+  background-color: #d6d7ef;
+  width: 60%;
+  height: 90vh;
+  margin: 30px auto;
+  border: 4px solid #898AC4;
+  border-radius: 10px;
+}
+
+/* Title Container */
+.title-container {
+  background-color: #9395d3;
+  width: 100%;
+  height: 11vh;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom: 4px solid #898AC4;
+
+  text-align: center;
+  justify-content: center;
+  
+}
+
+.title{
+  margin: 0px;
+  padding-top: 3px;
+  color: #FFF5F2;
+  font-size: 55px;
+  font-family: "Libertinus Keyboard", system-ui;
+  font-weight: 600;
+  font-style: normal;
+  
+}
+
+.span-dash {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
+ 
+}
