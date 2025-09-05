@@ -7,9 +7,10 @@ body {
 
 .main-container {
   background-color: #d6d7ef;
-  width: 60%;
+  width: min(100%, 900px);
   height: 90vh;
   margin: 30px auto;
+
   border: 4px solid #898AC4;
   border-radius: 10px;
 }
@@ -43,4 +44,59 @@ body {
   font-family: 'Courier New', Courier, monospace;
   font-size: 50px;
  
+}
+
+/*   --Task Card Style-- */
+.task-card{
+  margin: 20px 40px;
+  background-color: #FAF7F3;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 20px;
+  border-radius: 10px;
+}
+
+.task-text{
+color: #9395d3;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.task-fn{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+
+  
+
+}
+.task-btns{
+  display: flex;
+  gap: 20px;
+  color: #9395d3;
+
+
+}
+.edit-btn, .delete-btn, .status-btn{
+  all: unset;
+}
+.edit-btn:hover, .delete-btn:hover, .status-btn:hover{
+  cursor: pointer;
+  color: #AE75DA;
+  
+}
+
+.detail-btn{
+  all: unset;
+   background-color: #d6d7ef;
+  color: black;
+  
+  padding: 6px 5px;
+  border-radius: 5px;
+ 
+}
+.detail-btn:hover{
+  cursor: pointer;
+ background-color: #9395d3;
+  color: white;
 }
