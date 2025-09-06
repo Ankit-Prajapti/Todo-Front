@@ -53,9 +53,12 @@ const todoSlicer = createSlice({
             console.log("NO data to update available");
             
           }
+        },
+        clearTask: () => {
+          return [];
         }
     }
 });
 
-export const {addTask, markDone, removeTask, updateTask} = todoSlicer.actions;
+export const {addTask, markDone, removeTask, updateTask, clearTask} = todoSlicer.actions;
 export default todoSlicer.reducer;

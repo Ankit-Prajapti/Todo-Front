@@ -185,3 +185,76 @@ body {
   background-color: #9395d3;
   transition: background-color 0.5s ease-in-out;
 }
+
+/* Edit Task */
+
+.edit-cont{
+  margin: 20px 40px;
+  background-color: #faf7f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 20px;
+  border-radius: 10px;
+}
+.input-cont{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  /* margin-left: 20px; */
+}
+.input-cont > input {
+  all: unset;
+  min-width: 150%;
+
+  padding: 2px;
+  
+  border-bottom: solid 1.5px #8487e2;
+  
+}
+.input-cont > .task-int{
+  font-size: 25px;
+
+}
+.input-cont > .detail-int{
+  font-size: 20px;
+}
+.save-edit{
+  font-size: 20px;
+  background-color: #d6d7ef;
+  color: black;
+  border-style: solid 3px ;
+  border-color: #8487e2;
+
+  border-radius: 5px;
+ width: min(15%, 100px);
+ height: 45px;
+}
+.save-edit:hover{
+  cursor: pointer;
+   color: #faf7f3;
+  background-color: #8487e2;
+}
+
+/* Clear Button */
+
+.clear-btn-cont{
+  width: fit-content;
+  
+}
+.clear-btn{
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+   background-color: #d6d7ef;
+  color: black;
+  margin: 20px 40px;
+}
+
+.clear-btn:hover{
+  cursor: pointer;
+   color: #faf7f3;
+  background-color: #8487e2;
+  transition: background-color 0.7s ease, color 1s ease;
+}
