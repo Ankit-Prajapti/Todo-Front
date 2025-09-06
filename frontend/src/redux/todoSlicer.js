@@ -1,4 +1,4 @@
-import { asyncThunkCreator, createSlice } from "@reduxjs/toolkit";
+import {  createSlice } from "@reduxjs/toolkit";
 
 const initialState = [
   {
@@ -23,7 +23,7 @@ const initialState = [
 
 
 const todoSlicer = createSlice({
-    name: "tasks", 
+    name: "task", 
     initialState,
     reducers: {
         addTask: (state, action) => {
@@ -48,7 +48,7 @@ const todoSlicer = createSlice({
         updateTask: (state, action) => {
           const task = state.find((t) => t.id == action.payload.id);
           if (task) {
-            object.assign(task, action.payload)
+            Object.assign(task, action.payload)
           }else{
             console.log("NO data to update available");
             
@@ -57,5 +57,5 @@ const todoSlicer = createSlice({
     }
 });
 
-export const {addTask, markDone, removetask, updateTask} = todoSlicer.actions;
+export const {addTask, markDone, removeTask, updateTask} = todoSlicer.actions;
 export default todoSlicer.reducer;
