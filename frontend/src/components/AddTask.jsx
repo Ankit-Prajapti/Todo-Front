@@ -13,7 +13,8 @@ function AddTask() {
   };
 
   const handleAdd = () => {
-    const data={
+    if (title.length > 0){
+      let data={
       id: idCount,
       task: title,
       detail: detail,
@@ -22,19 +23,34 @@ function AddTask() {
     } 
     dispatch(addTask(data))
     setIdCount(idCount + 1);
+    setTitle("");
+    setDetail("");
+    handleAddToggle();
+    }else{
+      alert("Please add Task or else click Close button")
+    }
+    
   }
 
   return (
     <div className="add-task">
-      <button className="add-btn">
-        <IoIosAddCircle className="add-icon" /> <span className="add-text">Add Task</span>
-      </button>
+      
 
-      <div className="add-container">
-        <input type="text" placeholder="Title"  value={title} onChange={(e) => setTitle(e.target.value)}/>
+    {
+
+      toggleAdd ?
+      (
+        <div className="add-container">
+        <input type="text" placeholder="Title"  value={title} onChange={(e) => setTitle(e.target.value)} autoFocus />
         <input type="text" placeholder="Detail" value={detail} onChange={(e) => setDetail(e.target.value)} />
         <button className="add-btn2" onClick={() => handleAdd()}>Add</button>
+        <button className="close-btn" onClick={() => handleAddToggle()}>Close</button>
       </div>
+      ) : (<button className="add-btn" onClick={() => handleAddToggle()}>
+        <IoIosAddCircle className="add-icon" /> <span className="add-text">Add Task</span>
+      </button>)
+    }
+      
     </div>
   );
 }
