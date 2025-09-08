@@ -71,10 +71,19 @@ body {
   all: unset;
 }
 .edit-btn:hover,
-.delete-btn:hover,
+
 .status-btn:hover {
   cursor: pointer;
   color: #ae75da;
+}
+.delete-btn:hover{
+  cursor: pointer;
+  color: red;
+}
+.status-done{
+    all: unset;
+    cursor: pointer;
+  color: green;
 }
 
 .detail-btn {

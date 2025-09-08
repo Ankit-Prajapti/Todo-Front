@@ -41,7 +41,7 @@ export default function TaskCard({ task }) {
               </button>
 
               <button
-                className="status-btn"
+                className={task.done ? "status-done" : "status-btn" }
                 onClick={() => dispatch(markDone(task.id))}
               >
                 <CiCircleCheck size={24} style={{ strokeWidth: 2 }} />
